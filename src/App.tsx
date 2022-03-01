@@ -45,7 +45,7 @@ function App() {
 
         const timeout = setTimeout(updateStatus, 500)
         return () => clearTimeout(timeout)
-    }, [editorContainerRef, model]);
+    }, [editorContainerRef, model, updateStatus]);
 
     useEffect(() => {
         pushLog('Editor reset');
@@ -60,7 +60,7 @@ function App() {
     useEffect(() => {
         pushLog('Start API request');
         const startRequestTime = new Date().getTime();
-        fetch("https://catfact.ninja/fact").then(r => r.json()).then(res => {
+        fetch('https://catfact.ninja/fact').then(r => r.json()).then(res => {
             const elapsedTime = new Date().getTime() - startRequestTime;
             pushLog('Received API response - Time elapsed: ' + elapsedTime + 'ms');
             setTimeout(() => {
@@ -93,12 +93,12 @@ function App() {
             )}
         </div>
         <div style={{display: 'flex', height: '200px', width: '100%'}}>
-            <textarea ref={textareaRef} value={log.join("\n")} readOnly={true}  style={{flex: '1', resize: 'none'}} />
+            <textarea ref={textareaRef} value={log.join('\n')} readOnly={true}  style={{flex: '1', resize: 'none'}} />
             <div style={{flex: '1', padding: '0 8px'}}>
                 <p>
                     Proof of concept for the bug{' '}
-                    <a href="https://github.com/froala/react-froala-wysiwyg/issues/320" target="_blank">#320</a>{' '}
-                    of <a href="https://github.com/froala/react-froala-wysiwyg" target="_blank">react-froala-wysiwyg</a>.
+                    <a href='https://github.com/froala/react-froala-wysiwyg/issues/320' target='_blank' rel='noreferrer'>#320</a>{' '}
+                    of <a href='https://github.com/froala/react-froala-wysiwyg' target='_blank' rel='noreferrer'>react-froala-wysiwyg</a>.
                 </p>
                 <p>
                     Here you can set the delay (milliseconds) between the editor rendering and the model state update.{' '}
