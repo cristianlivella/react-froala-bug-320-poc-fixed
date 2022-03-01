@@ -78,7 +78,7 @@ function App() {
 
   return (
     <div style={{padding: '8px'}}>
-        <div ref={editorContainerRef} style={{height: '200px'}}>
+        <div ref={editorContainerRef} style={{height: '230px'}}>
             {showEditor && (
                 <FroalaEditor
                     model={model}
