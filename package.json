@@ -2,7 +2,7 @@
   "name": "test-break-froala",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cristianlivella.github.io/react-froala-bug-320-poc",
+  "homepage": "https://cristianlivella.github.io/react-froala-bug-320-poc-fixed",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
